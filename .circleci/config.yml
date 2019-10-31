@@ -9,10 +9,10 @@ jobs:
     steps:
       - checkout
       - run: 
-        name: Install Mkdocs
+          name: Install Mkdocs
           command: sudo pip install mkdocs
       - run:
-        name: Deploy
+          name: Deploy
           command: mkdocs gh-deploy 
 workflows:
   version: 2

@@ -5,9 +5,13 @@ jobs:
       - image: circleci/python:3.6-jessie-browsers
     steps:
       - checkout
-      - run: 
-          name: Install Mkdocs
-          command: sudo pip install mkdocs
+      - run:
+          name: Install and configure dependencies
+          command: |
+            npm install -g --silent gh-pages@2.0.1
+            git config user.email "thiagorpereira7d@gmail.com"
+            git config user.name "BuildCI"
+            sudo pip install mkdocs
       - add_ssh_keys:
           fingerprints:
             - "5e:dd:00:c3:ae:bb:91:c3:a6:67:77:ba:62:db:68:81"

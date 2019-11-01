@@ -1,6 +1,6 @@
 # Docs Features
 
-## Guia para implantação do deploy contínuo de Documentação 
+## Guia para implantação do deploy contínuo do Mkdocs
 ### Mkdocs + CircleCI
 
 Para realizar o deploy manual no mkdocs, no diretório onde estiver mkdocs.yml, basta rodar o comando:

@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  mkdocs:
     docker:
       - image: circleci/python:3.6-jessie-browsers
     steps:
@@ -25,6 +25,9 @@ jobs:
   
 workflows:
   version: 2
-  build_and_mkdocs:
-    jobs:
-      - build
+  deploy_mkdocs:
+    mkdocs:
+      - build:
+          filters:
+            branches:
+              only: master

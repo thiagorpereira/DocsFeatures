@@ -26,8 +26,8 @@ jobs:
 workflows:
   version: 2
   deploy_mkdocs:
-    mkdocs:
-      - build:
+    jobs:
+      - mkdocs:
           filters:
             branches:
               only: master

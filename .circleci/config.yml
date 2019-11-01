@@ -17,7 +17,7 @@ jobs:
             - "5e:dd:00:c3:ae:bb:91:c3:a6:67:77:ba:62:db:68:81"
       - run:
           name: Before Deploy
-          command: mkdocs build --verbose --clean --strict
+          command: mkdocs build --clean
       
       - run:
           name: Deploy
